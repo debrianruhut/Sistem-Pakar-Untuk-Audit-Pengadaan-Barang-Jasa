@@ -31,11 +31,11 @@
                             </tr>
                             <tr>
                                 <th>Role</th>
-                                <td> {{ $user-> role }}</td>
+                                <td> {{ $user->role->nama_role }}</td>
                             </tr>
                             <tr>
                                 <th>Avatar</th>
-                                <td><img src="" {{ asset($user->avatar) }} " alt="Avatar" height="150" width="150"> </td>
+                                <td><img src="{{ asset($user->avatar) }}" alt="Avatar" height="150"> </td>
                             </tr>
                         </table>
                     </div>

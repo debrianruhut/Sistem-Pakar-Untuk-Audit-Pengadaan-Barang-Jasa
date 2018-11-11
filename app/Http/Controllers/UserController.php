@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Yajra\Datatables\Datatables;
 
@@ -25,8 +26,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.users.create');
+        // $role = Role::lists('nama_role','id')->toArray();
+        $role = Role::all();
+        return view('admin.users.create', compact('role'));
     }
 
     /**
@@ -75,7 +77,8 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail($id);
-        return view('admin.users.edit', compact('user'));
+        $role = Role::all();
+        return view('admin.users.edit', compact('user','role'));
     }
 
     /**
@@ -99,8 +102,9 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         //jika passsword di isi maka akan di enkripsi  tapi jika passwordnya kosong menggunakan passowrd lama 
 
-        $request['password'] = $request->get('password') ? bcrypt ($request->get('password')) : $user-> password; 
+        $request['password'] = $request->get('password') ? bcrypt ($request->get('password')) : $user->password; 
         $request['avatar'] = $request->get('avatar') ? $request->get('avatar') : '/images/user-icon.png';
+        $request['role_id'] = $request->get('role') ? $request->get('role') : $user->role_id;
 
         //jika sudah baru update
         $user->update($request->all());
@@ -129,7 +133,9 @@ class UserController extends Controller
             return '<img src="' . asset('images/user-icon.png') . '" height="24" width="24"> ' .
             $users->name;
         })
-
+        ->addColumn('role', function ($users){
+            return $users->role->nama_role;
+        })
         ->addColumn('action', function ($users){
             return view('layouts.admin.partials._action', [
                 'model' =>  $users,
