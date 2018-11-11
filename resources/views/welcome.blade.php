@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
+        <link rel="shortcut icon" type="image/x-icon" href="{{url('images/ico.png')}}">
+        <title>Sistem Pakar</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -44,9 +44,14 @@
             .content {
                 text-align: center;
             }
-
+            .copyright {
+                text-align: center;
+            }
             .title {
                 font-size: 84px;
+            }
+            .sub-title {
+                font-size: 34px;
             }
 
             .links > a {
@@ -58,7 +63,9 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
-
+            .m-t-md {
+                margin-top: 60px;
+            }
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -78,18 +85,26 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="title">
+                    Sistem Pakar
+                </div>
+                <div class="sub-title m-b-md">
+                    Audit Pengadaan Barang Jasa
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="">Kamus</a>
+                    <a href="">Diagnosa</a>
+                    <a href="">History</a>
+                    <a href="">Rules</a>
+                    <a href="https://github.com/debrianruhut" target="_blank">GitHub</a>
+                </div>
+                <div class="copyright m-t-md">
+                    Copyright © Debrian Ruhut Saragih 2018
                 </div>
             </div>
+
         </div>
+
     </body>
 </html>
