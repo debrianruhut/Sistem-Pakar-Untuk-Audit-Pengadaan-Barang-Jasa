@@ -23,7 +23,7 @@ Thank you for considering contributing to the "Sistem Pakar Untuk Audit Pengadaa
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within this application, please send an e-mail to Taylor Otwell via [debrianruhut.saragih@hotmail.com](mailto:debrianruhut.saragih@hotmail.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this application, please send an e-mail to me via [debrianruhut.saragih@hotmail.com](mailto:debrianruhut.saragih@hotmail.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
