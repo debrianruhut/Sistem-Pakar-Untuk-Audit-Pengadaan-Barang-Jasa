@@ -1,6 +1,6 @@
 <p align="center">
 	<img src="https://laravel.com/assets/img/components/logo-laravel.svg">
-	<h2>Sistem Pakar Untuk Audit Pengadaan Barang Jasa (Laravel Framework 5.6)</h2>
+	<h2>Sistem Pakar Untuk Audit Pengadaan Barang Jasa (Laravel Framework 5.7)</h2>
 </p>
 
 ## Tentang Aplikasi
